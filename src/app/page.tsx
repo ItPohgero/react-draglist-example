@@ -26,19 +26,26 @@ export default function App() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="max-w-3xl">
-        <ul>
-          {items?.map((item: any) => (
-            <li className="flex gap-4 my-2 items-center" key={item.id}>
-              <button
-                className={`w-10 h-10 rounded-lg text-2xl ${COLOR(item.id)}`}
-                {...getItemProps(item.id)}
-              >
-                ::
-              </button>
-              <span>{item?.id + 1} : {item.text}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="text-center text-3xl font-bold">React Draglist</div>
+        <div className="text-center">react-draglist-ipo</div>
+        <div className="mb-6 mt-2 flex justify-center">
+          <a href="https://www.npmjs.com/package/react-draglist-ipo" className="bg-rose-700 text-wrap rounded-full p-2">NPM Package</a>
+        </div>
+        <div>
+          <ul>
+            {items?.map((item: any) => (
+              <li className="flex gap-4 my-2 items-center" key={item.id}>
+                <button
+                  className={`w-10 h-10 rounded-lg text-2xl ${COLOR(item.id)}`}
+                  {...getItemProps(item.id)}
+                >
+                  ::
+                </button>
+                <span>{item?.id + 1} : {item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
